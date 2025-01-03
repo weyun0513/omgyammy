@@ -48,4 +48,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
         env:
-            VITE_BASE_URL:  ${{ secrets.VITE_BASE_URL }} 
+          VITE_BASE_URL:  ${{ secrets.VITE_BASE_URL }} 
