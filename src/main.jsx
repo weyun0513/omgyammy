@@ -118,7 +118,7 @@ const router = createBrowserRouter([
     path: "*",
     element: <Navigate to="/error" />,
   },
-]);
+], { basename: import.meta.env.DEV ? '/' : '/omgyammy/' });
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <RecoilRoot>

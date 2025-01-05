@@ -7,20 +7,30 @@ import { Helmet } from "react-helmet";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeftLong } from "@fortawesome/free-solid-svg-icons";
 import { useLoadingState } from "../../Recoil/Loading/useLoadingState";
+import { useParams } from 'react-router-dom';
 
 function Article() {
+
   const { setToastMsg } = useToastState();
   const location = useLocation();
-  const articleId = location.pathname.split("/").pop();
+  //  const articleId2 = location.pathname.split("/").pop();
+  const articleId = useParams();
+  const { id } = articleId;
+  console.log(id);  // 檢查 id 是什麼
+
   const [article, setArticle] = useState({});
   const { setIsLoading } = useLoadingState();
 
+
+  //  debugger
   useEffect(() => {
+    if (!id) return;  // 如果沒有 id，則不進行請求
     (async () => {
       setIsLoading(true);
       await axios
-        .get(`${import.meta.env.VITE_BASE_URL}/blog/article/${articleId}`)
+        .get(`${import.meta.env.VITE_BASE_URL}/blog/article/${id}`)
         .then((resp) => {
+
           setArticle(resp.data.article);
         })
         .catch((err) => {
@@ -28,12 +38,12 @@ function Article() {
         })
         .finally(() => setIsLoading(false));
     })();
-  }, []);
+  }, [id]);
 
   return (
     <MainLayout>
       <Helmet>
-        <title>{article.title + " | The Coffee Shop"}</title>
+        <title>{article.title + " | omgyammy"}</title>
       </Helmet>
       <Link
         to="/product"

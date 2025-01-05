@@ -33,6 +33,8 @@ jobs:
     name: Deploy
     needs: build
     runs-on: ubuntu-latest
+    env:
+          VITE_BASE_URL:  ${{ secrets.VITE_BASE_URL }} 
     if: github.ref == 'refs/heads/main'
 
     steps:
@@ -47,5 +49,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
-        env:
-          VITE_BASE_URL:  ${{ secrets.VITE_BASE_URL }} 
+        
