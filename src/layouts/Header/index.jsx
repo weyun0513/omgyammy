@@ -58,7 +58,7 @@ function Header() {
       <Helmet>
         <title>
           {location.pathname === "/"
-            ? "喬響念"
+            ? "喬饗念"
             : `${
                 location.pathname
                   .split("/")
@@ -66,7 +66,7 @@ function Header() {
                   .charAt(0)
                   .toLocaleUpperCase() +
                 location.pathname.split("/").pop().slice(1)
-              } | 喬響念`}
+              } | 喬饗念`}
         </title>
       </Helmet>
       <Link to="/">
