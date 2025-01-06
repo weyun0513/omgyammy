@@ -88,14 +88,14 @@ function Header() {
 
       <Navigation />
       <div className="flex mr-2 gap-2">
-        {!isLoggedIn && (
+        {/* {!isLoggedIn && (
           <Link
             to="/login"
             className="p-4 text-xl  text-black  hover:text-[#cda154]"
           >
             <FontAwesomeIcon icon={faRightToBracket} />
           </Link>
-        )}
+        )} */}
         {isLoggedIn && (
           <Link
             to="/user"
