@@ -11,7 +11,7 @@ function About() {
       <div className="h-full flex pt-6 pb-12 justify-center">
         <div className="w-5/6 md:w-3/6 text-blue">
           <h1 className="text-2xl md:text-3xl text-center mb-4">
-            喬<span className="text-[#cda154]"> 響</span> 念
+            喬<span className="text-[#cda154]"> 饗</span> 念
           </h1>
           <div className="flex flex-col">
             <img

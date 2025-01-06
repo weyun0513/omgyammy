@@ -70,7 +70,7 @@ function Home() {
           <Slide direction="down">
 
             <h1 className="text-3xl lg:text-4xl font-medium py-3">
-              喬<span className="text-[#cda154]"> 響</span> 念
+              喬<span className="text-[#cda154]">饗</span> 念
             </h1>
             <span className="text-xl md:text-4xl font-normal text-[#cda154] py-3">
 
