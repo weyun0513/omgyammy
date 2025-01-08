@@ -33,7 +33,7 @@ import OrderSingle from "./pages/User/components/Order/OrderSingle";
 import AdminUsers from "./pages/AdminPanel/pages/AdminUsers";
 import AdminBlog from "./pages/AdminPanel/pages/AdminBlog";
 import AdminShop from "./pages/AdminPanel/pages/AdminShop";
-
+const basename = process.env.NODE_ENV === 'production' ? '/omgyammy/' : '/';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -118,7 +118,7 @@ const router = createBrowserRouter([
     path: "*",
     element: <Navigate to="/error" />,
   },
-], { basename: import.meta.env.DEV ? '/' : '/omgyammy/' });
+],  { basename });
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <RecoilRoot>
