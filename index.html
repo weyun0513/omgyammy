@@ -36,6 +36,7 @@
   (function(l) {
     const currentURL = window.location.href;
 console.log(currentURL);
+alert(currentURL)
     if (l.search[1] === '/' ) {
       var decoded = l.search.slice(1).split('&').map(function(s) { 
         return s.replace(/~and~/g, '&')
