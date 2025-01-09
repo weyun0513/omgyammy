@@ -7,11 +7,10 @@
 </head>
 <body>
   <script>
-    alert
-    console.log(window.location.href );
+    alert(window.location.pathname  );
     // 延时 3 秒后跳转
     setTimeout(function() {
-     window.location.href = window.location.href;
+      window.location.href =window.location.pathname ;
          }, 3000); // 3000 毫秒 = 3 秒
   </script>
 </body>
